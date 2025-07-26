@@ -1,0 +1,32 @@
+{
+    "version": "2.19.2",
+    "description": "KEmulator nnmod",
+    "homepage": "https://github.com/shinovon/KEmulator",
+    "license": "Unlicense",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/shinovon/KEmulator/releases/download/v2.19.2/kemnnx64.v2.19.2.zip",
+            "hash": "B3BA93CC361661B7B738F91E7F5641CF0F2AA07431B8C52A0EA8B5BDFA636242"
+        }
+    },
+    "installer": {
+        "script": ""
+    },
+    "post_install": [
+        "'javaw \"-Djava.library.path=$PSScriptRoot/kemnnx64/\" -Xmx512M -jar \"$PSScriptRoot/kemnnx64/KEmulator.jar\"' > \"$dir/KEmulator.ps1\""
+    ],
+    "uninstaller": {
+        "script": ""
+    },
+    "bin": "KEmulator.ps1",
+    "checkver": {
+        "github": "https://github.com/shinovon/KEmulator"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/shinovon/KEmulator/releases/download/v$version/kemnnx64.v$version.zip"
+            }
+        }
+    }
+}
