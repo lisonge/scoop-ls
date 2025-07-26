@@ -12,8 +12,10 @@
         }
     },
     "pre_install": [
+        "Install-Module ps2exe",
         "'javaw \"-Djava.library.path=$PSScriptRoot/kemnnx64/\" -Xmx512M -jar \"$PSScriptRoot/kemnnx64/KEmulator.jar\"' > \"$dir/KEmulator.ps1\"",
-        "Install-Module ps2exe; ps2exe \"$dir/KEmulator.ps1\" \"$dir/KEmulator.exe\"; rm \"$dir/KEmulator.exe\""
+        "ps2exe \"$dir/KEmulator.ps1\" \"$dir/KEmulator.exe\"",
+        "rm \"$dir/KEmulator.exe\""
     ],
     "shortcuts": [
         [
