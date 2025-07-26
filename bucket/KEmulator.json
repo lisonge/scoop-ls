@@ -15,7 +15,7 @@
         "Install-Module ps2exe",
         "'javaw \"-Djava.library.path=$PSScriptRoot/kemnnx64/\" -Xmx512M -jar \"$PSScriptRoot/kemnnx64/KEmulator.jar\"' > \"$dir/KEmulator.ps1\"",
         "ps2exe \"$dir/KEmulator.ps1\" \"$dir/KEmulator.exe\"",
-        "rm \"$dir/KEmulator.exe\""
+        "rm \"$dir/KEmulator.ps1\""
     ],
     "shortcuts": [
         [
