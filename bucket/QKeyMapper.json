@@ -14,7 +14,7 @@
     "shortcuts": [
         [
             "QKeyMapper_Qt6_x64/QKeyMapper.exe",
-            "KEmulator"
+            "QKeyMapper"
         ]
     ],
     "checkver": {
